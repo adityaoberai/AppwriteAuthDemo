@@ -90,4 +90,10 @@
     display: none;
     margin: auto;
   }
+
+  @media (prefers-color-scheme: dark) {
+    #userDetails {
+      border-color: #f9f9f9;
+    }
+  }
 </style>
