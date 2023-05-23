@@ -7,9 +7,12 @@
         let email = document.querySelector('#login-email').value;
         let password = document.querySelector('#login-password').value;
 
-        let user = await sdk.login(email, password);
-        console.log(user);
-        document.querySelector('#userDetailsBox').innerHTML = JSON.stringify(user);
+        try {
+            let user = await sdk.login(email, password);
+            document.querySelector('#userDetailsBox').innerHTML = JSON.stringify(user);
+        } catch(err) {
+            document.querySelector('#userDetailsBox').innerHTML = err;
+        };
     }
 </script>
 

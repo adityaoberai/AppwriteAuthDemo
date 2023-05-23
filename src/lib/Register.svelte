@@ -8,8 +8,12 @@
         let email = document.querySelector('#register-email').value;
         let password = document.querySelector('#register-password').value;
 
-        let user = await sdk.register(email, password, name);
-        document.querySelector('#userDetailsBox').innerHTML = JSON.stringify(user);
+        try {
+            let user = await sdk.register(email, password, name);
+            document.querySelector('#userDetailsBox').innerHTML = JSON.stringify(user);
+        } catch(err) {
+            document.querySelector('#userDetailsBox').innerHTML = err;
+        };
     }
 </script>
 

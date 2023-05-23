@@ -20,12 +20,12 @@
   };
 
   async function logout() {
-    await sdk.logout();
     document.querySelector('#userDetailsBox').innerHTML = 'User Details Not Present';
     document.querySelector('.login').style.display = 'none';
     document.querySelector('.register').style.display = 'none';
     document.querySelector('.card').style.display = 'none';
     document.querySelector('#logout').style.display = 'none';
+    await sdk.logout();
   };
 
 </script>
