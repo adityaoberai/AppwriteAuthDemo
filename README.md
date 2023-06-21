@@ -1,4 +1,4 @@
-# Appwrite Auth Demo - Codess.Cafe Workshop
+# Appwrite Auth Demo - Live Workshop
 
 Svelte demo app that showcases email/password authentication with Appwrite
 
